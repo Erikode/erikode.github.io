@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
+    <title>Erika</title>
+  </head>
+  <body>
+   <script>
+
+
+
+
+    alert("＊このウェブサイトは、架空の店舗のHPをイメージしたものです");
+
+
+
+   </script>
+
+
+      <div class="header">
+      <div class="header-wrapper">
+      <div class="header-logo">
+        <a href="index.html">Florist</a>
+      </div>
+
+      <div class="header-list">
+
+
+
+      <a>Bio</a>
+
+      <a href="contact.html">Contact Us</a>
+      <a href="">Items</a>
+      <a href="">Histiry</a>
+      <a href="">Collection</a>
+
+
+
+</div>
+</div>
+</div>
+
+
+<div class="soshiki-container">
+
+
+
+
+
+
+<div class="input-area">
+<input type="text" id="price" placeholder="金額">
+<input type="text" id="num" placeholder="人数">
+<select id="unit">
+  <option value="10">10円単位</option>
+  <option value="100" selected>100円単位</option>
+  <option value="1000">1000円単位</option>
+</select>
+<div id="btn">計算</div>
+
+
+</div>
+<div class="result-area">
+  <p id="result">ここに結果を表示します</p>
+  <div id="reset">もう一度計算する</div>
+
+
+
+
+</div>
+
+
+</div>
+
+<script> (function(){
+
+'use strict';
+
+var price=document.getElementById('price');
+var num=document.getElementById('num');
+var unit=document.getElementById('unit');
+var btn=document.getElementById('btn');
+var result=document.getElementById('result');
+var reset=document.getElementById('reset');
+
+btn.addEventListener('click',function(){
+  var payLess;
+  var short;
+  var payMore;
+  var over;
+  var str;
+
+  payLess=Math.floor(price.value/num.value/unit.value)*unit.value;
+  short=price.value-(payLess*num.value);
+  payMore=Math.ceil(price.value/num.value/unit.value)*unit.value;
+  over=Math.abs(price.value-(payMore*num.value));
+  if(over===0 && short === 0){
+    str='ひとり'+(price.value/num.value)+'円ちょうどです.';
+  }else{
+
+    str='ひとり'+payLess+'円だと'+short+'円たりません...'+
+    'ひとり'+payMore+'円だと'+over+'円あまります.';
+  };
+
+  result.textContent= str;
+});
+
+})();
+
+</script>
+
+
+
+
+<div class="soshiki-collection">
+<div class="type">
+<div class="type-name">
+  ホワイトベース
+</div>
+<div class="detail">
+  百合、菊、蘭、すずらん等
+</div>
+
+<div class="type-price">
+    M=12000円、S=7800円
+</div>
+
+
+
+</div>
+
+<div class="type">
+<div class="type-name">
+
+  ブルーベース
+</div>
+
+<div class="detail">
+  バラ、カーネーション、かすみそう等
+</div>
+
+<div class="type-price">
+  M=16000円、S=9700円
+</div>
+
+</div>
+
+<div class="type">
+<div class="type-name">
+  カスタマイズ（故人の好みのお花を存分に）
+
+</div>
+<div class="detail">
+  ご希望のお花をお申し付けください。
+</div>
+
+<div class="type-price">
+  L=29000円、M=20000円、S=14000円
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="footer">
+<div class="footer-logo">
+  <h3>Florist</h3>
+  <p>since 1998</p>
+
+</div>
+
+
+<div class="footer-list">
+  <ul>
+    <li>会社概要</li>
+    <li>サイトマップ</li>
+    <li>ご挨拶</li>
+    <li>リンク集</li>
+  </ul>
+  <ul>
+    <li>ブログ</li>
+    <li>About us</li>
+    <li>事業改革</li>
+    <li>プレスリリース</li>
+  </ul>
+</div>
+
+
+</div>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
+    <title>Erika</title>
+  </head>
+  <body>
+   <script>
+
+
+   var i=0;
+   function show(){
+     console.log(i++);
+
+   var tid = setTimeout(function(){
+     show();
+   },1000);
+   if (i>10){
+     clearTimeout(tid);
+   }
+   }
+   show();
+
+
+   </script>
+
+   <div class="header">
+   <div class="header-wrapper">
+   <div class="header-logo">
+     <a href="index.html">Florist</a>
+   </div>
+
+   <div class="header-list">
+
+
+
+   <a>Bio</a>
+
+   <a href="contact.html">Contact Us</a>
+   <a href="">Items</a>
+   <a href="">Histiry</a>
+   <a href="">Collection</a>
+
+
+
+ </div>
+ </div>
+ </div>
+
+
+ <div class="top-wrapper">
+
+ <div class="top-description">
+ <div class="top-logo">
+ <h1>Thank you...!</h1>
+ </div>
+ <p>We would appreciate your feedback
+   </p>
+
+ </div>
+</div>
+
+
+
+
+<div class="contact-wrapper">
+<form>
+
+<h2>お問い合わせ</h2>
+<div class="type">
+  <p>お問い合わせの種類</p>
+  <select name="category">
+<option value="選択してください">
+  選択してください
+</option>
+<option value="商品全般について">
+  商品全般について
+</option>
+<option value="店舗情報について">
+  店舗情報について
+</option>
+
+
+  </select>
+</div>
+
+<p>当店の商品をご購入いただいたことはありますか</p>
+<label>
+  <input type="radio" name="yesno" value="yes">ある</label>
+  <label>
+    <input type="radio" name="yesno" value="no">ない</label>
+
+</form>
+
+
+<div class="inquiry-contents">
+  <p>お問い合わせ内容</p>
+  <textarea></textarea>
+</div>
+
+<div id='btn'>送信</div>
+<script> (function(){
+
+'use strict';
+
+var btn=document.getElementById('btn');
+
+btn.addEventListener('click',function(){
+  var stir;
+
+stir='お問い合わせ内容が送信されました。回答は原則２４時間以内にご記入いただいたメールアドレスに返信いたします。'
+
+
+
+  alert(stir);
+});
+
+})();
+
+</script>
+
+
+
+
+
+
+
+</div>
