@@ -408,10 +408,15 @@ form{
     margin: 20px;
   }
   .type{
+    margin-left: 20px;
     float:left;
-    width: 33%;
-    
+    width: 28%;
+    border: 5px solid #cccccc;
+    border-top-color:#000000;
+    border-bottom-color:#000000;
+
   }
+
 #result{
   margin: 0;
 }
