@@ -43,13 +43,10 @@ line-height: 60px;
 
 }
 .balloons-left{
-  float: left;
+  
   padding-left: 70px;
 }
-.balloons-right{
-  padding-left: 1000px;
- float: left;
-}
+
 
 .balloon{
   width:200px;
